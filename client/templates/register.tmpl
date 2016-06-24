@@ -1,0 +1,25 @@
+<div class="registeration_card" data-ng-controller="registerationController" data-ng-init="init()">
+	<div class="title" data-ng-bind-html="$$constants.regestiration_title"></div>
+	<div class="form_container">
+		<form class="registeration_form" name="registerationForm" novalidate>
+			<div class="registeration_form_fields">
+				<input type="text" placeholder="Username" name="username" field="registerationForm.username" data-ng-model="credentials.username" data-ng-focus="showGuidelines(registerationForm.username)" restrict-invalid-input validate-username required></input><br/>
+				<input type="text" placeholder="Password" name="password" data-ng-model="credentials.password" guidelines="credential_creation_guidelines" data-ng-focus="showGuidelines(registerationForm.password)" required></input><br/>
+				<input type="text" placeholder="Confirm Password" name="password_dup" data-ng-model="credentials.username_dup" data-ng-focus="showGuidelines(registerationForm.password_dup)" required></input>
+			</div>
+		</form>
+		<div class="registeration_guidelines">
+			<div class="guidelines_container">
+				<div class="guidelines_title">{{guidelines_title}}</div>
+				<div class="guidelines_list">
+					<ul>
+						<li data-ng-repeat="guideline in credential_creation_guidelines"><span class="glyphicon" data-ng-class="(guideline.is_followed) ? 'glyphicon-ok' : 'glyphicon-remove' "></span><span>{{guideline.guideline}}</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="submit_button">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+</div>

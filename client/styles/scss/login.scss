@@ -1,0 +1,165 @@
+@import "constants.scss";
+@import "utils.scss";
+
+/****************** Sign-in Card *******************/
+:-webkit-input-placeholder /* Chrome */
+{ 
+    font-family: serif;
+    font-size: large;
+    padding: 0px 10px;
+    color:#999;
+}
+
+::-moz-placeholder /* Firefox 19+ */
+{  
+    font-family: serif;
+    font-size: large;
+    padding: 0px 10px;
+    color:#999;
+}
+
+:-ms-input-placeholder /* Explorer */
+{ 
+    font-family: serif;
+    font-size: large;
+    padding: 0px 10px;
+    color:#999;
+}
+
+.signin_card
+{
+    @extend vertical_horizontal_align;
+    height:400px;
+    width:350px;
+    border-radius: 3px;
+    box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.3), -0.5px 1px 1px rgba(0, 0, 0, 0.3);
+    background: transparent;
+}
+
+.signin_card:before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:100%;
+    border-radius: 3px;
+    background: #F5F5F5;
+    opacity: 0.7;
+}
+.signin_card .welcome_msg
+{
+    @extend horizontal_align;
+    height:20%;
+    width:200px;
+}
+
+.signin_card .welcome_msg div
+{
+    @extend vertical_horizontal_align;
+    text-align: center;
+    width:100%;
+    text-transform: capitalize;
+}
+
+.signin_card .username_info
+{
+    @extend horizontal_align;
+    top:20%;
+    height:30%;
+    width:200px;
+}
+
+.signin_card .username_info .username_dp
+{
+    @extend vertical_horizontal_align;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    background: url("../../images/default_user_avatars.jpg") -264px 642px;
+    background-size: 500px;
+}
+
+.signin_card .username_info .username_dp img
+{
+    border-radius: 50%;
+}
+
+.signin_card .login_form
+{
+    @extend vertical_horizontal_align;
+    transform: translate(-50%,0);
+    height:40%;
+    width:200px;
+}
+
+.signin_card .error_box
+{
+    height:20px;
+}
+
+.signin_card .login_form .username_password_box div
+{
+    text-align: center;
+    color: rgb(255,0,0);
+    font-weight: 10px;
+}
+
+.signin_card .login_form input
+{
+    width:100%;
+    height: 35px;
+    border: solid 1px #708090;
+    font-size: large;
+    background-color: #FFF;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+.signin_card .login_form input:focus
+{
+    border: solid 1px #4682B4;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3), inset -1px -1px 1px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.signin_card .login_form button
+{
+    width:100%;
+    border-radius: 0px;
+    height: 35px;
+    margin-bottom:10px;
+}
+
+.signin_card .login_form button:focus
+{
+    outline: none;
+}
+
+.signin_card .new_user_link
+{
+    @extend horizontal_align;
+    top:80%;
+    height:20%;
+    width:200px;
+}
+
+.signin_card .new_user_link div
+{
+    @extend vertical_horizontal_align;
+    text-align: center;
+    width:100%;
+    color:blue;
+    cursor: pointer;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+input.input_error
+{
+    @extend input_error;
+}
+
+/****************** Angular Classes *****************/
+
+
+/****************** Media Queries *****************/

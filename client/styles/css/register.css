@@ -1,0 +1,134 @@
+/****************** Constants **********************/
+/****************** Constants **********************/
+/****************** Utils **************************/
+full_height_width {
+  height: 100%;
+  width: 100%; }
+
+vertical_align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+horizontal_align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+vertical_horizontal_align, .registeration_card, .registeration_card .form_container .registeration_form .registeration_form_fields, .registeration_card .form_container .guidelines_container, .registeration_card .submit_button button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+clear_float, .registeration_card .form_container:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both; }
+
+input_error {
+  border-color: red !important; }
+
+/****************** Utils **************************/
+/****************** User-Creation Card *******************/
+.registeration_card {
+  height: 590px;
+  width: 790px;
+  border-radius: 3px;
+  box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.3), -0.5px 1px 1px rgba(0, 0, 0, 0.3);
+  background: transparent; }
+
+.registeration_card:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  background: #F5F5F5;
+  opacity: 0.7; }
+
+.registeration_card .title {
+  position: absolute;
+  top: 0px;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid;
+  text-align: center;
+  font-size: larger; }
+
+.registeration_card .form_container {
+  position: relative;
+  top: 90px;
+  height: 410px;
+  width: 100%; }
+
+.registeration_card .form_container .registeration_form {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%; }
+
+.registeration_form_fields input {
+  width: 295px;
+  height: 35px;
+  border: solid 1px #708090;
+  font-size: large;
+  background-color: #FFF;
+  margin: 20px;
+  cursor: pointer; }
+
+.registeration_form_fields input:focus {
+  border: solid 1px #4682B4;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3), inset -1px -1px 1px rgba(0, 0, 0, 0.3);
+  outline: none; }
+
+.registeration_card .form_container .registeration_guidelines {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%; }
+
+.registeration_card .form_container .guidelines_container {
+  width: 335px; }
+
+.registeration_card .form_container .guidelines_container .guidelines_title {
+  margin-bottom: 20px;
+  font-size: large;
+  text-align: center; }
+
+.registeration_card .form_container .guidelines_container .guidelines_list {
+  text-align: center; }
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul {
+  list-style: none;
+  padding-left: 0px; }
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul li {
+  margin-bottom: 5px; }
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul li span.glyphicon {
+  margin-right: 5px; }
+
+.glyphicon-ok {
+  color: green; }
+
+.glyphicon-remove {
+  color: red; }
+
+.registeration_card .submit_button {
+  position: relative;
+  top: 90px;
+  height: 90px;
+  width: 100%;
+  border-top: 1px solid; }
+
+.registeration_card .submit_button button {
+  width: 50%;
+  height: 35px;
+  border-radius: 0px; }
+
+.registeration_card .submit_button button:focus {
+  outline: none; }

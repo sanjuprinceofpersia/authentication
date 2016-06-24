@@ -1,0 +1,40 @@
+/****************** Constants **********************/
+/****************** Constants **********************/
+/****************** Utils **************************/
+full_height_width, html, body, .container-fluid, .container-fluid > div {
+  height: 100%;
+  width: 100%; }
+
+vertical_align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+horizontal_align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+vertical_horizontal_align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+clear_float {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both; }
+
+input_error {
+  border-color: red !important; }
+
+/****************** Utils **************************/
+/****************** Global ***********************/
+body {
+  background: url("../..//images/login_background.jpg") no-repeat center center fixed;
+  background-size: cover; }
+
+/****************** Media Queries *****************/

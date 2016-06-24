@@ -1,0 +1,154 @@
+@import "constants.scss";
+@import "utils.scss";
+
+/****************** User-Creation Card *******************/
+.registeration_card
+{
+    @extend vertical_horizontal_align;
+    height:590px;
+    width:790px;
+    border-radius: 3px;
+    box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.3), -0.5px 1px 1px rgba(0, 0, 0, 0.3);
+    background: transparent;
+}
+
+.registeration_card:before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:100%;
+    border-radius: 3px;
+    background: #F5F5F5;
+    opacity: 0.7;
+}
+
+.registeration_card .title
+{
+	position: absolute;
+	top: 0px;
+	height: 90px;
+	width: 100%;
+	padding: 20px;
+	border-bottom: 1px solid;
+	text-align: center;
+    font-size: larger;
+}
+
+.registeration_card .form_container
+{
+	position: relative;
+	top:90px;
+	height: 410px;
+	width: 100%;
+}
+.registeration_card .form_container:after
+{
+    @extend clear_float;
+}
+
+.registeration_card .form_container .registeration_form
+{
+	position: relative;
+    float: left;
+	width: 50%;
+	height:100%;
+}
+
+.registeration_card .form_container .registeration_form .registeration_form_fields
+{
+	
+	@extend vertical_horizontal_align;
+}
+
+.registeration_form_fields input
+{
+    width: 295px;
+    height: 35px;
+    border: solid 1px #708090;
+    font-size: large;
+    background-color: #FFF;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.registeration_form_fields input:focus
+{
+    border: solid 1px #4682B4;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3), inset -1px -1px 1px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.registeration_card .form_container .registeration_guidelines
+{
+    position: relative;
+    float:left;
+    width: 50%;
+    height:100%;
+}
+
+.registeration_card .form_container .guidelines_container
+{
+    @extend vertical_horizontal_align;
+    width: 335px;   
+}
+
+.registeration_card .form_container .guidelines_container .guidelines_title
+{
+    margin-bottom: 20px;
+    font-size: large;
+    text-align: center;
+}
+
+.registeration_card .form_container .guidelines_container .guidelines_list
+{
+    text-align: center;
+}
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul
+{
+    list-style: none;
+    padding-left:0px;
+}
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul li
+{
+    margin-bottom:5px;
+}
+
+.registeration_card .form_container .guidelines_container .guidelines_list ul li span.glyphicon
+{
+    margin-right: 5px;
+}
+
+.glyphicon-ok
+{
+    color:green;
+}
+
+.glyphicon-remove
+{
+    color: red;
+}
+
+.registeration_card .submit_button
+{
+    position:relative;
+    top:90px;
+    height:90px;
+    width: 100%;
+    border-top: 1px solid;
+}
+
+.registeration_card .submit_button button
+{
+    @extend vertical_horizontal_align;
+    width:50%;
+    height: 35px;
+    border-radius: 0px;
+}
+
+.registeration_card .submit_button button:focus
+{
+    outline: none;
+}

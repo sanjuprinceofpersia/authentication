@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Saurabh Kumar Verma" />
+		<title>Login</title>
+		<link type="text/css" rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="styles/css/main.css">
+		<link type="text/css" rel="stylesheet" href="styles/css/login.css">
+		<link type="text/css" rel="stylesheet" href="styles/css/register.css">
+		<link type="text/css" rel="stylesheet" href="styles/css/page_not_found.css">
+		<script type="text/javascript" src="angular/angular.min.js"></script>
+		<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<script type="text/javascript" src="js/app/constants.js"></script>
+		<script type="text/javascript" src="js/app/routers.js"></script>
+		<script type="text/javascript" src="js/services/utilService.js"></script>
+		<script type="text/javascript" src="js/services/formutilService.js"></script>
+		<script type="text/javascript" src="js/services/validationService.js"></script>
+		<script type="text/javascript" src="js/directives/validationDirectives.js"></script>
+		<script type="text/javascript" src="js/controllers/loginController.js"></script>
+		<script type="text/javascript" src="js/controllers/dashboardController.js"></script>
+		<script type="text/javascript" src="js/controllers/registerationController.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid" ng-app="authenticationApp">
+			<div ui-view></div>
+		</div>
+	</body>
+</html>

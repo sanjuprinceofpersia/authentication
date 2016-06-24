@@ -1,0 +1,17 @@
+@import "constants.scss";
+@import "utils.scss";
+
+/****************** Global ***********************/
+
+html, body, .container-fluid, .container-fluid>div
+{
+    @extend full_height_width
+}
+
+body
+{
+    background: url("../..//images/login_background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/****************** Media Queries *****************/

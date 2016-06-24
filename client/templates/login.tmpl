@@ -1,0 +1,43 @@
+<div class="signin_card" data-ng-controller="loginController">
+	<!--Welcome Message-->
+	<div class="welcome_msg">
+		<div> Welcome User <br/> Please log-in to continue</div>
+	</div>
+
+	<!--Username_info-->
+	<div class="username_info">
+		<div class="username_dp"></div>
+	</div>
+
+	<!--Login-in form-->
+	<form class="login_form" name="loginForm" set-focus novalidate>
+		<!--Username-->
+		<div class="username_password_box" ng-if="invalid_username">
+			<div class="error_box">
+				<div data-ng-if="(loginForm.$submitted && loginForm.username.$error.required)">Please enter username</div>
+				<div data-ng-if="(loginForm.$submitted && loginForm.username.$error.invalid_username)">Username dosen't exists</div>
+			</div>
+			
+
+			<input type="text" data-ng-class="(loginForm.$submitted && loginForm.username.$invalid) ? 'input_error':''" placeholder="Username" name="username" field="loginForm.username"  data-ng-model="credentials.username" reset-field required></input>
+		</div>
+
+		<div class="username_password_box" ng-if="!invalid_username">
+			<div class="error_box">
+				<div data-ng-if="(loginForm.$submitted && loginForm.password.$error.required)">Please enter password</div>
+				<div data-ng-if="(loginForm.$submitted && loginForm.password.$error.invalid_password)">Invalid password</div>
+			</div>
+			
+
+			<input type="text" data-ng-class="(loginForm.$submitted && loginForm.password.$invalid) ? 'input_error':''" placeholder="Password" name="password" field="loginForm.password" data-ng-model="credentials.password" reset-field required></input>
+		</div>
+
+		<!--Submit-->
+		<button type="submit"class="btn btn-primary" data-ng-disabled="loginForm.$invalid" data-ng-click="submitCredentials();">Submit</button>
+	</form>
+
+	<!--New user link-->
+	<div class="new_user_link">
+		<div ui-sref="register">Create new user</div>
+	</div>
+</div>
