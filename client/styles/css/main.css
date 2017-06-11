@@ -1,7 +1,7 @@
 /****************** Constants **********************/
 /****************** Constants **********************/
 /****************** Utils **************************/
-full_height_width, html, body, .container-fluid, .container-fluid > div {
+full_height_width, html, body, .container-fluid, .container-fluid > div[field="ui-view"] {
   height: 100%;
   width: 100%; }
 

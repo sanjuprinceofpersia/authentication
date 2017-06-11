@@ -118,6 +118,9 @@ input_error {
 .glyphicon-remove {
   color: red; }
 
+input[disabled] {
+  background-color: grey; }
+
 .registeration_card .submit_button {
   position: relative;
   top: 90px;

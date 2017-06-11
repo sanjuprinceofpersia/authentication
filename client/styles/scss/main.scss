@@ -3,7 +3,7 @@
 
 /****************** Global ***********************/
 
-html, body, .container-fluid, .container-fluid>div
+html, body, .container-fluid, .container-fluid>div[field="ui-view"]
 {
     @extend full_height_width
 }

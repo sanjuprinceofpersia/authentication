@@ -4,8 +4,8 @@
 		<form class="registeration_form" name="registerationForm" novalidate>
 			<div class="registeration_form_fields">
 				<input type="text" placeholder="Username" name="username" field="registerationForm.username" data-ng-model="credentials.username" data-ng-focus="showGuidelines(registerationForm.username)" restrict-invalid-input validate-username required></input><br/>
-				<input type="text" placeholder="Password" name="password" data-ng-model="credentials.password" guidelines="credential_creation_guidelines" data-ng-focus="showGuidelines(registerationForm.password)" required></input><br/>
-				<input type="text" placeholder="Confirm Password" name="password_dup" data-ng-model="credentials.username_dup" data-ng-focus="showGuidelines(registerationForm.password_dup)" required></input>
+				<input type="password" placeholder="Password" name="password" data-ng-model="credentials.password" guidelines="credential_creation_guidelines" data-ng-focus="showGuidelines(registerationForm.password)" data-ng-disabled="!registerationForm.username.$valid" restrict-invalid-input validate-password required></input><br/>
+				<input type="password" placeholder="Confirm Password" name="password_dup" data-ng-model="credentials.username_dup" data-ng-focus="showGuidelines(registerationForm.password_dup)" data-ng-disabled="!registerationForm.password.$valid" restrict-invalid-input validate-password-duplicate required></input>
 			</div>
 		</form>
 		<div class="registeration_guidelines">
@@ -20,6 +20,6 @@
 		</div>
 	</div>
 	<div class="submit_button">
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-primary" data-ng-disabled="!registerationForm.$valid" data-ng-click="submitForm()">Submit</button>
 	</div>
 </div>

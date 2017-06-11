@@ -131,6 +131,11 @@
     color: red;
 }
 
+input[disabled]
+{
+    background-color: grey;
+}
+
 .registeration_card .submit_button
 {
     position:relative;

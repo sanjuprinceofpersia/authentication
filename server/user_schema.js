@@ -43,6 +43,24 @@ users_model.schema.pre('save',function(next)
 })
 /*********** Response Constructor *************/
 
+var user_regesteration_response = function(data)
+{
+	var response = {};
+	if(utils.is_defined(data.errmsg))
+	{
+		response.statusCode = 0;
+		response.msg = data.errmsg;
+		response.data = data;
+	}
+	else
+	{
+		response.statusCode = 1;
+		response.msg = "user created successfully";
+		response.data = data;
+	}
+	return response;
+};
+
 /****************** CURD **********************/
 var create_user = function(usr)
 {
@@ -58,11 +76,11 @@ var register_user = function(_user)
 		{
 			if(err)
 			{				
-				return reject(err);
+				return reject(user_regesteration_response(err));
 			}
 			else
-			{				
-				return resolve(user);
+			{
+				return resolve(user_regesteration_response(user));
 			}
 		});		
 	});

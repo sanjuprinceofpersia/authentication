@@ -5,6 +5,8 @@ authApp.controller("loginController",function($scope,$rootScope,$state,utils,for
 	
 	lgCtrl.credentials = {};
 	lgCtrl.invalid_username = true;
+	lgCtrl.user = {};
+	lgCtrl.user.name = "sanju";
 
 	lgCtrl.submitCredentials = function()
 	{

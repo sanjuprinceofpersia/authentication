@@ -30,6 +30,28 @@ authApp.controller("registerationController", function($scope,$rootScope,$state,
 		}
 	};
 
+	rgCtrl.submitForm = function()
+	{
+		if(rgCtrl.registerationForm.$valid)
+		{
+			validationService.createUser(rgCtrl.credentials).then(function(data){
+				if(data.statusCode)
+				{
+					$state.go('login');
+					$rootScope.$emit("showNotification",{});
+				}
+				else
+				{
+					//Username not available
+					formUtils.selectField(field);
+					$rootScope.$emit("showNotification",{type:"error"});
+				}
+			},function(reject){
+				//todo
+			})
+		}
+	};
+
 	rgCtrl.init = function()
 	{
 		rgCtrl.showGuidelines();

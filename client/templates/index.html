@@ -11,21 +11,36 @@
 		<link type="text/css" rel="stylesheet" href="styles/css/page_not_found.css">
 		<script type="text/javascript" src="angular/angular.min.js"></script>
 		<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="js/app/app.js"></script>
 		<script type="text/javascript" src="js/app/app.js"></script>
 		<script type="text/javascript" src="js/app/constants.js"></script>
 		<script type="text/javascript" src="js/app/routers.js"></script>
+		<script type="text/javascript" src="js/factories/httpInterceptionFactory.js"></script>
 		<script type="text/javascript" src="js/services/utilService.js"></script>
 		<script type="text/javascript" src="js/services/formutilService.js"></script>
 		<script type="text/javascript" src="js/services/validationService.js"></script>
 		<script type="text/javascript" src="js/directives/validationDirectives.js"></script>
+		<script type="text/javascript" src="js/controllers/appController.js"></script>
+		<script type="text/javascript" src="js/controllers/notificationsController.js"></script>
 		<script type="text/javascript" src="js/controllers/loginController.js"></script>
 		<script type="text/javascript" src="js/controllers/dashboardController.js"></script>
 		<script type="text/javascript" src="js/controllers/registerationController.js"></script>
 	</head>
 	<body>
-		<div class="container-fluid" ng-app="authenticationApp">
-			<div ui-view></div>
+		<div class="container-fluid" data-ng-app="authenticationApp" data-ng-controller="appController">
+			<div data-ng-controller="notificationsController">
+				<div class="notifications">
+					<div class="alert alert-dismissible" data-ng-class="(type === 'success')? 'alert-success' : 'alert-danger' " role="alert" data-ng-if="showNotification">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<strong>Well Done!</strong> User have been created successfully, please login to continue.
+					</div>
+				</div>
+			</div>
+			<div field="ui-view" ui-view></div>
 		</div>
 	</body>
 </html>

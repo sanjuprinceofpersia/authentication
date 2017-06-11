@@ -9,8 +9,9 @@ authApp.constant("$$constants",{
     "constraints_username_password_valid_characters" : "should be alphanumeric",
     "constraints_username_unique" : "should be unique",
     "constraints_username_start" : "should start with character",
+    "constraints_password_number" : "should have atleast one number",
+    "constraints_password_special_char" : "should have one special character",
     "constraints_password_dup_identical" : "should be identical to password provided"
-
 })
 .run(function($rootScope, $$constants, $sce){
 	$rootScope.$$constants = $$constants;
